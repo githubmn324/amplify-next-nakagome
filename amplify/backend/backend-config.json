@@ -1,0 +1,224 @@
+{
+  "api": {
+    "amplifynextnakagome": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "amplifynextnakagomebe4eae7f"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authamplifynextnakagomebe4eae7f"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    },
+    "restapi1nakagome": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "writedynamonakagome"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "amplifynextnakagomebe4eae7f": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "writedynamonakagome": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_writedynamonakagome_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "writedynamonakagome"
+        }
+      ]
+    },
+    "AMPLIFY_function_writedynamonakagome_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "writedynamonakagome"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_streamArn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Blogvsqwdtofdfdu5irrdtzmez7qnedev_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Blogvsqwdtofdfdu5irrdtzmez7qnedev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_streamArn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    },
+    "AMPLIFY_storage_Postdfuc5e2ucjb5rhjt3flnptdy6ydev_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "Postdfuc5e2ucjb5rhjt3flnptdy6ydev"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "Blogvsqwdtofdfdu5irrdtzmez7qnedev": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "Postdfuc5e2ucjb5rhjt3flnptdy6ydev": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    }
+  }
+}

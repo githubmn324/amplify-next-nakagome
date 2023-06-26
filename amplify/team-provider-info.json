@@ -1,0 +1,49 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifynextnakagome-dev-114202-authRole",
+      "UnauthRoleArn": "arn:aws:iam::758382128758:role/amplify-amplifynextnakagome-dev-114202-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::758382128758:role/amplify-amplifynextnakagome-dev-114202-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-amplifynextnakagome-dev-114202-deployment",
+      "UnauthRoleName": "amplify-amplifynextnakagome-dev-114202-unauthRole",
+      "StackName": "amplify-amplifynextnakagome-dev-114202",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:758382128758:stack/amplify-amplifynextnakagome-dev-114202/e4247ad0-0025-11ee-9ddb-0a629cdd37c9",
+      "AmplifyAppId": "d3ix7iv666lfrd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifynextnakagome-dev-114202-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "amplifynextnakagomebe4eae7f": {}
+      },
+      "api": {
+        "amplifynextnakagome": {},
+        "restapi1nakagome": {}
+      },
+      "storage": {
+        "Blogvsqwdtofdfdu5irrdtzmez7qnedev": {
+          "tableName": "Blog-vsqwdtofdfdu5irrdtzmez7qne-dev",
+          "region": "ap-northeast-1",
+          "arn": "arn:aws:dynamodb:ap-northeast-1:758382128758:table/Blog-vsqwdtofdfdu5irrdtzmez7qne-dev",
+          "streamArn": "arn:aws:dynamodb:ap-northeast-1:758382128758:table/Blog-vsqwdtofdfdu5irrdtzmez7qne-dev/stream/2023-06-01T06:00:55.110",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "Postdfuc5e2ucjb5rhjt3flnptdy6ydev": {
+          "tableName": "Post-dfuc5e2ucjb5rhjt3flnptdy6y-dev",
+          "region": "ap-northeast-1",
+          "arn": "arn:aws:dynamodb:ap-northeast-1:758382128758:table/Post-dfuc5e2ucjb5rhjt3flnptdy6y-dev",
+          "streamArn": "arn:aws:dynamodb:ap-northeast-1:758382128758:table/Post-dfuc5e2ucjb5rhjt3flnptdy6y-dev/stream/2023-05-30T06:27:00.802",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        }
+      },
+      "function": {
+        "writedynamonakagome": {
+          "deploymentBucketName": "amplify-amplifynextnakagome-dev-114202-deployment",
+          "s3Key": "amplify-builds/writedynamonakagome-786b5972467465414954-build.zip"
+        }
+      }
+    }
+  }
+}
